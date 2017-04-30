@@ -13,7 +13,7 @@
 
 
 ### Principe général
-DropDaBomb est un TBS (jeu de stratégie au tour par tour) de cartes en ligne. Les affrontements se font en un contre un, les joueurs pouvant utiliser des cartes en échange de ressources, de la poudre principalement, pour essayer de prendre le dessus sur son adversaire, jusqu'à qu'un joueur amène la barre de vie à 150 et fasse ainsi exploser la bombe principale dans le camp de son opposant.
+DropDaBomb est un TBS (jeu de stratégie au tour par tour) de cartes en ligne. Les affrontements se font en un contre un, les joueurs pouvant utiliser des cartes en échange de ressources, de la poudre principalement, pour essayer de prendre le dessus sur leurs adversaires, jusqu'à qu'un joueur amène la barre de vie à 150 et fasse ainsi exploser la bombe principale dans le camp de son opposant.
 
 
 
@@ -23,8 +23,8 @@ Dès qu'un joueur atteint 150 points de vie, ce qui équivaut à faire attendre 
 
 ### Les mains et decks
 Avant de rechercher un adversaire, chaque joueur constitue un Deck de 8 cartes qu'il utilisera lors de ses combats. Le joueur peut changer la composition de son Deck entre chaque match comme bon lui semble, en respectant les règles suivantes :
-  * Le joueur doit posséder toutes les cartes dans son Deck;
-  * Chaque carte ne peut être présente qu'une seule fois par Deck
+  * Le joueur doit posséder toutes les cartes dans son Deck.
+  * Chaque carte ne peut être présente qu'une seule fois par Deck.
 Lors de l'ouverture des hostilités, chaque joueur pioche aléatoirement 4 cartes dans son Deck pour composer sa main initiale.
 Les mains sont constituées des cartes que le joueur peut utiliser lors de son tour. Une main remplie est composée au plus de 4 cartes.
 Chaque carte utilisée revient dans le Deck du joueur, en dernière position.
@@ -48,7 +48,7 @@ Il existe, à ce jour, deux types de cartes, divisés ensuite en sous-groupes :
 
     + Les bombes directes : 
 
-        Dès la pose, ces cartes infligent un certain montant de dégâts, et poussant la barre de vie vers l'adversaire. Elles peuvent aussi attaquer un batiment en vue de réduire sa vie, voire de le détruire. 
+        Dès la pose, ces cartes infligent un certain montant de dégâts, et poussent la barre de vie vers l'adversaire. Elles peuvent aussi attaquer un batiment en vue de réduire sa vie, voire de le détruire. 
          
     + Les boucliers : 
 
@@ -69,8 +69,7 @@ Il existe, à ce jour, deux types de cartes, divisés ensuite en sous-groupes :
 
     + Les bâtiments : 
 
-        Ce sont des cartes persistantes qui ont un effet tous les tours tant qu'elles sont présentes sur la zone de jeu. Elles partagent les caractéristiques des cartes persistantes,
-        Notamment la possibilité d'être désintégrés, mais possèdent des points de vie, sont améliorables jusqu'à deux fois, et peuvent être aussi attaqués avec des bombes directes :
+        Ce sont des cartes persistantes qui ont un effet tous les tours tant qu'elles sont présentes sur la zone de jeu. Elles partagent les caractéristiques des cartes persistantes, notamment la possibilité d'être désintégrés, mais possèdent des points de vie, sont améliorables jusqu'à deux fois, et peuvent être aussi attaqués avec des bombes directes :
 
         * Si ses points de vie tombent à 0, le bâtiment perd un niveau d'amélioration, sauf s'il était au niveau 1 d'amélioration, auquel cas il est totalement détruit et supprimé de la zone de jeu.
 

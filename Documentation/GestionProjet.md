@@ -45,7 +45,7 @@ Nom | Description | Membre | Temps (en h)
 ### Sprint 5
 Nom | Description | Membre | Temps (en h)
 --- | ------------| ------ | ------------
-**TEST1** | Phase de test de qualité et de robustesse de la base de donnée | Rémi | 5
+**TEST1** | Phase de test de qualité et de robustesse de la base de données | Rémi | 5
 **TEST1** | Phase de test de qualité et de robustesse de l'architecture | Lucas | 5
 **TEST1** | Phase de test de qualité et de robustesse des structures | Pierre | 5
 

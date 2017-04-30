@@ -13,7 +13,7 @@
 > Consulter les informations du compte, voir / changer le deck et cliquer sur "Jouer" dans la barre de navigation.
 > Une fois les deux comptes en recherche de match, une partie va se créer et il ne reste plus qu'à jouer. 
 
-> Ce GIT n'est pas celui sur lequel nous avons travaillé, nous avons crée celui ci en guise de "rendu de projet"
+> Ce GIT n'est pas celui sur lequel nous avons travaillé, nous avons crée celui ci en guise de "rendu de projet".
 > Vous pouvez donc cliquer sur "Download" afin d'obtenir tout le projet sous une archive ".zip"
  
 1. [Le jeu](#le-jeu)
@@ -30,8 +30,8 @@
 ## Le jeu 
 
 Drop Da Bomb est un jeu de plateau/cartes en ligne.
-Il se base sur un ensemble de cartes (Cartes) collectionnables (**Inventaire**) par un joueur (**Compte**) afin de composer une ou plusieurs « main de jeu » (**Deck**). 
-Ces cartes peuvent être obtenues de diverses manières mais principalement via la boutique (**Shop**) qui permet d’acheter avec différentes monnaies des lots de cartes (**Packs**). Il existe différents types et raretés pour les cartes. 
+Il se base sur un ensemble de cartes (Cartes) collectionnables (**Inventaire**) par un joueur (**Compte**) afin de composer une ou plusieurs « paquet de cartes » (**Deck**). 
+Ces cartes peuvent être obtenues de diverses manières mais principalement via la boutique (**Shop**), qui permet d’acheter avec différentes monnaies des lots de cartes (**Packs**). Il existe différents types et raretés pour les cartes. 
 Une partie (**Match**) oppose deux joueurs, dans une arène spécifique avec des règles et des modes de jeu précis ; à tour de rôle les joueurs peuvent utiliser les cartes de leur Deck alors en main pour tenter de faire basculer l’objectif (« la bombe ») dans le camp de leur adversaire. 
 Si la bombe explose ou se trouve dans le camp d’un joueur à la fin du temps imparti, la partie est perdue par celui-ci ; elle est gagnée par l’autre qui pourra alors remporter des récompenses (Cartes, Monnaie Virtuelle, etc..).
 
@@ -62,7 +62,7 @@ Si vous êtes un nouvel utilisateur, voici comment jouer en quelques étapes seu
 
 Nous avons pour ce projet des ambitions qui sont au-delà des objectifs fixés dans le cadre de projets scolaires. 
 
-Les fonctionnalités implementées representent déjà une charge de travail et de compétences important, et la catégorie des fonctionnalités *"A venir"* ne sont pas à interpreter au sens "fonctionnalités que nous n'avons pas eu le temps de developper", mais bien au sens "fonctionnalités que nous visons à moyen et long terme pour aboutir à un site et un jeu d'une qualité quasi-professionnelle.
+Les fonctionnalités implementées representent déjà une charge de travail et de compétences importante, et la catégorie des fonctionnalités *"A venir"* ne sont pas à interpreter au sens "fonctionnalités que nous n'avons pas eu le temps de developper", mais bien au sens "fonctionnalités que nous visons à moyen et long terme pour aboutir à un site et un jeu d'une qualité quasi-professionnelle.
 
 Pour l'heure actuelle, nous avons un site qui permet de se connecter, de voir et modifier son deck et de lancer une partie. 
 Le client de jeu est fonctionnel et le jeu également. Des améliorations notamment au niveau du design et du coté "responsive" sont à venir, car il est évidemment que le jeu fait pour l'instant très "amateur". 
