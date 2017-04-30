@@ -35,13 +35,12 @@ $(document).ready(function(){
 
 
 
-    socket.on("AUTH_CLI_OK", function(obj){
+   socket.on("AUTH_CLI_OK", function(obj){
             var $toastContent = $('<span color="red">OK CONNECTE</span>');
             Materialize.toast($toastContent, 6000);
-            Joueur = $('#connexion_pseudo').val();
+            Joueur = $('#pseudo').attr('class')
             // $('#modal_connexion').modal('close');
     } );
-
 
     socket.on("AUTH_CLI_FAIL", function(obj){
             var $toastContent = $('<span color="red">Erreur, mauvais pseudo et/ou mot de passe !</span>');

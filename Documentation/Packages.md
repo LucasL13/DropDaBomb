@@ -247,5 +247,3 @@ En résumé, les principales caractéristiques de Jade sont :
 -	Passage d’informations utilisables dans le code Jade au format JSON lors du rendering
 -	Possibilité de découper le code et de créer des portions réutilisables via les « include »
 
-
-### More incoming.

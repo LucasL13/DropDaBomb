@@ -650,6 +650,7 @@ io.sockets.on('connection', function (socket){
 
     function verificationTourJoueur(){
       /* soit tour joueur1 */
+      console.log("PSEUDO = "+pseudo);
       if(pseudo == etatM.joueur1.pseudo){
         if(etatM.tour%2 == 0) return true;
         else return false;

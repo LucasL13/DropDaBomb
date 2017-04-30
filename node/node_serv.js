@@ -239,9 +239,9 @@ function authentification(pseudo, password,req,res){
     if (err) throw err;
     if(rows.length != 0){
         console.log(" : " + rows[0].Pseudo + rows[0].mailCompte);
-        req.session.account = {'pseudo' : req.param("signin_pseudo"), 'password' : req.param("signin_password"), 'mailCompte' : rows[0].mailCompte, 'niveauJoueur' : rows[0].niveauJoueur, 'monnaieIG' : rows[0].monnaieIG, 'estAdmin' : rows[0].estAdmin};
+        req.session.account = {'pseudo' : req.param("signin_pseudo"), 'password' : req.param("signin_password")};
         req.session.save( (err) => {} );
-        res.render('Account', req.session.account);
+        res.render('Account', {'pseudo' : req.param("signin_pseudo"), 'password' : req.param("signin_password"), 'mailCompte' : rows[0].mailCompte, 'niveauJoueur' : rows[0].niveauJoueur, 'monnaieIG' : rows[0].monnaieIG, 'estAdmin' : rows[0].estAdmin});
     }
     else{
         req.session.account = {'pseudo' : undefined};
@@ -250,7 +250,6 @@ function authentification(pseudo, password,req,res){
     }
   });
   connection.end();
-
 }
 
 function recuperation_deck(req, res){
