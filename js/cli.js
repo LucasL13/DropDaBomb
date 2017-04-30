@@ -25,7 +25,7 @@ var CARD_UPGRADE = 11;
 //var socket = io.connect('http://192.168.43.7:8080');
 //var socket = io.connect('http://109.7.220.208:3000');
 
-var socket = io.connect('http://localhost:3001');
+var socket = io.connect('http://217.182.69.175:3001');
 
 
 var Joueur;    //Récup le pseudo du guguss
@@ -80,11 +80,11 @@ function card_upgrade(){
 
 
   $("#zone_select_card_effect_container").html(
-    '<img id=\"zone_select_card_effect_card1\" src=\"img/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
-    '<img id=\"zone_select_card_effect_card2\" src=\"img/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
-    '<img id=\"zone_select_card_effect_card3\" src=\"img/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
-    '<img id=\"zone_select_card_effect_card4\" src=\"img/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
-    '<img id=\"zone_select_card_effect_card5\" src=\"img/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">'
+    '<img id=\"zone_select_card_effect_card1\" src=\"web/img/CARDS/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
+    '<img id=\"zone_select_card_effect_card2\" src=\"web/img/CARDS/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
+    '<img id=\"zone_select_card_effect_card3\" src=\"web/img/CARDS/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
+    '<img id=\"zone_select_card_effect_card4\" src=\"web/img/CARDS/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
+    '<img id=\"zone_select_card_effect_card5\" src=\"web/img/CARDS/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">'
   );
 
   $("#zone_select_card_effect_card1").css({'width': '20%', 'height': '20%'});
@@ -98,18 +98,18 @@ function card_upgrade(){
 
   for(var i=0;i<etatJoueur.carteActiveNonRetourne.length;i++){
     if(etatJoueur.carteActiveNonRetourne[i].typeCarte == 'batiment'){
-      $('#zone_select_card_effect_card'+(i+1)).attr('src',"img/"+etatJoueur.carteActiveNonRetourne[i].imageCarte);
+      $('#zone_select_card_effect_card'+(i+1)).attr('src',"web/img/CARDS/"+etatJoueur.carteActiveNonRetourne[i].imageCarte);
       $('#zone_select_card_effect_card'+(i+1)).on('click',handleSelectCardEffectUpgrade);
       $('#zone_select_card_effect_card'+(i+1)).addClass("card_clickable");
     }
     else {
-      $('#zone_select_card_effect_card'+(i+1)).attr('src','img/CARD_DEFAULT_VERSO.png');
+      $('#zone_select_card_effect_card'+(i+1)).attr('src','web/img/CARDS/CARD_DEFAULT_VERSO.png');
       $('#zone_select_card_effect_card'+(i+1)).off('click',handleSelectCardEffectUpgrade);
       $('#zone_select_card_effect_card'+(i+1)).removeClass("card_clickable");
     }
   }
   for(var i=etatJoueur.carteActiveNonRetourne.length;i<5;i++){
-    $('#zone_select_card_effect_card'+(i+1)).attr('src','img/CARD_DEFAULT_VERSO.png');
+    $('#zone_select_card_effect_card'+(i+1)).attr('src','web/img/CARD_DEFAULT_VERSO.png');
     $('#zone_select_card_effect_card'+(i+1)).off('click',handleSelectCardEffectUpgrade);
     $('#zone_select_card_effect_card'+(i+1)).removeClass("card_clickable");
   }
@@ -168,11 +168,11 @@ function card_batiment(){
 
 
   $("#zone_select_card_effect_container").html(
-    '<img id=\"zone_select_card_effect_card1\" src=\"img/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
-    '<img id=\"zone_select_card_effect_card2\" src=\"img/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
-    '<img id=\"zone_select_card_effect_card3\" src=\"img/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
-    '<img id=\"zone_select_card_effect_card4\" src=\"img/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
-    '<img id=\"zone_select_card_effect_card5\" src=\"img/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">'
+    '<img id=\"zone_select_card_effect_card1\" src=\"web/img/CARDS/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
+    '<img id=\"zone_select_card_effect_card2\" src=\"web/img/CARDS/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
+    '<img id=\"zone_select_card_effect_card3\" src=\"web/img/CARDS/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
+    '<img id=\"zone_select_card_effect_card4\" src=\"web/img/CARDS/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
+    '<img id=\"zone_select_card_effect_card5\" src=\"web/img/CARDS/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">'
   );
 
   $("#zone_select_card_effect_card1").css({'width': '20%', 'height': '20%'});
@@ -186,18 +186,18 @@ function card_batiment(){
 
   for(var i=0;i<actifAdversaire.length;i++){
     if(actifAdversaire[i].typeCarte == 'batiment'){
-      $('#zone_select_card_effect_card'+(i+1)).attr('src',"img/"+actifAdversaire[i].imageCarte);
+      $('#zone_select_card_effect_card'+(i+1)).attr('src',"web/img/CARDS/"+actifAdversaire[i].imageCarte);
       $('#zone_select_card_effect_card'+(i+1)).on('click',handleSelectCardEffectBatiment);
       $('#zone_select_card_effect_card'+(i+1)).addClass("card_clickable");
     }
     else {
-      $('#zone_select_card_effect_card'+(i+1)).attr('src','img/CARD_DEFAULT_VERSO.png');
+      $('#zone_select_card_effect_card'+(i+1)).attr('src','web/img/CARDS/CARD_DEFAULT_VERSO.png');
       $('#zone_select_card_effect_card'+(i+1)).off('click',handleSelectCardEffectBatiment);
       $('#zone_select_card_effect_card'+(i+1)).removeClass("card_clickable");
     }
   }
   for(var i=actifAdversaire.length;i<5;i++){
-    $('#zone_select_card_effect_card'+(i+1)).attr('src','img/CARD_DEFAULT_VERSO.png');
+    $('#zone_select_card_effect_card'+(i+1)).attr('src','web/img/CARDS/CARD_DEFAULT_VERSO.png');
     $('#zone_select_card_effect_card'+(i+1)).off('click',handleSelectCardEffectBatiment);
     $('#zone_select_card_effect_card'+(i+1)).removeClass("card_clickable");
   }
@@ -248,10 +248,10 @@ function card_echange_force(){
   /* dessin du modal */
 
   $("#zone_select_card_effect_container").html(
-    '<img id=\"zone_select_card_effect_card1\" src=\"img/CARD_DEFAULT_VERSO.png\" class=\"zone_select_card_img card_clickable\">' +
-    '<img id=\"zone_select_card_effect_card2\" src=\"img/CARD_DEFAULT_VERSO.png\" class=\"zone_select_card_img card_clickable\">' +
-    '<img id=\"zone_select_card_effect_card3\" src=\"img/CARD_DEFAULT_VERSO.png\" class=\"zone_select_card_img card_clickable\">' +
-    '<img id=\"zone_select_card_effect_card4\" src=\"img/CARD_DEFAULT_VERSO.png\" class=\"zone_select_card_img card_clickable\">'
+    '<img id=\"zone_select_card_effect_card1\" src=\"web/img/CARDS/CARD_DEFAULT_VERSO.png\" class=\"zone_select_card_img card_clickable\">' +
+    '<img id=\"zone_select_card_effect_card2\" src=\"web/img/CARDS/CARD_DEFAULT_VERSO.png\" class=\"zone_select_card_img card_clickable\">' +
+    '<img id=\"zone_select_card_effect_card3\" src=\"web/img/CARDS/CARD_DEFAULT_VERSO.png\" class=\"zone_select_card_img card_clickable\">' +
+    '<img id=\"zone_select_card_effect_card4\" src=\"web/img/CARDS/CARD_DEFAULT_VERSO.png\" class=\"zone_select_card_img card_clickable\">'
   );
 
   $("#zone_select_card_effect_card1").css({'width': '25%', 'height': '20%'});
@@ -317,11 +317,11 @@ function card_desenvoutement(){
 
 
   $("#zone_select_card_effect_container").html(
-    '<img id=\"zone_select_card_effect_card1\" src=\"img/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
-    '<img id=\"zone_select_card_effect_card2\" src=\"img/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
-    '<img id=\"zone_select_card_effect_card3\" src=\"img/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
-    '<img id=\"zone_select_card_effect_card4\" src=\"img/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
-    '<img id=\"zone_select_card_effect_card5\" src=\"img/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">'
+    '<img id=\"zone_select_card_effect_card1\" src=\"web/img/CARDS/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
+    '<img id=\"zone_select_card_effect_card2\" src=\"web/img/CARDS/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
+    '<img id=\"zone_select_card_effect_card3\" src=\"web/img/CARDS/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
+    '<img id=\"zone_select_card_effect_card4\" src=\"web/img/CARDS/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">' +
+    '<img id=\"zone_select_card_effect_card5\" src=\"web/img/CARDS/BOUCLIER_RENVOI.png\" class=\"zone_select_card_img card_clickable\">'
   );
 
   $("#zone_select_card_effect_card1").css({'width': '20%', 'height': '20%'});
@@ -335,13 +335,13 @@ function card_desenvoutement(){
 
   for(var i=0;i<actifAdversaire.length;i++){
     console.log('#zone_select_card_effect_card'+(i+1)+' '+actifAdversaire[i].imageCarte);
-    $('#zone_select_card_effect_card'+(i+1)).attr('src',"img/"+actifAdversaire[i].imageCarte);
+    $('#zone_select_card_effect_card'+(i+1)).attr('src',"web/img/CARDS/"+actifAdversaire[i].imageCarte);
     $('#zone_select_card_effect_card'+(i+1)).on('click',handleSelectCardEffectDesenvoutement);
     $('#zone_select_card_effect_card'+(i+1)).addClass("card_clickable");
   }
   for(var i=actifAdversaire.length;i<5;i++){
     console.log("i = "+i);
-    $('#zone_select_card_effect_card'+(i+1)).attr('src','img/CARD_DEFAULT_VERSO.png');
+    $('#zone_select_card_effect_card'+(i+1)).attr('src','web/img/CARD_DEFAULT_VERSO.png');
     $('#zone_select_card_effect_card'+(i+1)).off('click',handleSelectCardEffectDesenvoutement);
     $('#zone_select_card_effect_card'+(i+1)).removeClass("card_clickable");
   }
@@ -425,51 +425,51 @@ function chercherMatch(){
 function dessineMain(main){
 
   if(main[0] !== undefined){
-    $('#zone_deck_cards_card1 img').attr('src','img/'+main[0].imageCarte);
+    $('#zone_deck_cards_card1 img').attr('src','web/img/CARDS/'+main[0].imageCarte);
     $('#zone_deck_cards_card1 img').attr('id',main[0].id_Carte);
     $('#zone_deck_cards_card1_powder').text(main[0].coutCarte);
   }
   else {
-    $('#zone_deck_cards_card1 img').attr('src','img/CARD_DEFAULT_VERSO.png');
+    $('#zone_deck_cards_card1 img').attr('src','web/img/CARDS/CARD_DEFAULT_VERSO.png');
     $('#zone_deck_cards_card1 img').attr('id',-1);
     $('#zone_deck_cards_card1_powder').text('');
 
   }
 
   if(main[1] !== undefined){
-    $('#zone_deck_cards_card2 img').attr('src','img/'+main[1].imageCarte);
+    $('#zone_deck_cards_card2 img').attr('src','web/img/CARDS/'+main[1].imageCarte);
     $('#zone_deck_cards_card2 img').attr('id',main[1].id_Carte);
     $('#zone_deck_cards_card2_powder').text(main[1].coutCarte);
 
   }
   else {
-    $('#zone_deck_cards_card2 img').attr('src','img/CARD_DEFAULT_VERSO.png');
+    $('#zone_deck_cards_card2 img').attr('src','web/img/CARDS/CARD_DEFAULT_VERSO.png');
     $('#zone_deck_cards_card2 img').attr('id',-1);
     $('#zone_deck_cards_card2_powder').text('');
 
   }
 
   if(main[2] !== undefined){
-    $('#zone_deck_cards_card3 img').attr('src','img/'+main[2].imageCarte);
+    $('#zone_deck_cards_card3 img').attr('src','web/img/CARDS/'+main[2].imageCarte);
     $('#zone_deck_cards_card3 img').attr('id',main[2].id_Carte);
     $('#zone_deck_cards_card3_powder').text(main[2].coutCarte);
 
   }
   else {
-    $('#zone_deck_cards_card3 img').attr('src','img/CARD_DEFAULT_VERSO.png');
+    $('#zone_deck_cards_card3 img').attr('src','web/img/CARDS/CARD_DEFAULT_VERSO.png');
     $('#zone_deck_cards_card3 img').attr('id',-1);
     $('#zone_deck_cards_card3_powder').text('');
 
   }
 
   if(main[3] !== undefined){
-    $('#zone_deck_cards_card4 img').attr('src','img/'+main[3].imageCarte);
+    $('#zone_deck_cards_card4 img').attr('src','web/img/CARDS/'+main[3].imageCarte);
     $('#zone_deck_cards_card4 img').attr('id',main[3].id_Carte);
     $('#zone_deck_cards_card4_powder').text(main[3].coutCarte);
 
   }
   else {
-    $('#zone_deck_cards_card4 img').attr('src','img/CARD_DEFAULT_VERSO.png');
+    $('#zone_deck_cards_card4 img').attr('src','web/img/CARDS/CARD_DEFAULT_VERSO.png');
     $('#zone_deck_cards_card4 img').attr('id',-1);
     $('#zone_deck_cards_card4_powder').text('');
 
@@ -503,7 +503,7 @@ function dessineBarreDeVie(etatJoueur,bouclierAdversaire){
 
 function dessineCarteCentre(carteJoue){
 
-  $('#zone_jeu_card_middle_card').attr('src','img/'+carteJoue.imageCarte);
+  $('#zone_jeu_card_middle_card').attr('src','web/img/CARDS/'+carteJoue.imageCarte);
   $('#zone_jeu_card_middle_card').addClass('pop_card_center');
 
   $('.pop_card_center').one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
@@ -537,13 +537,13 @@ function dessineCartesActives(etatJoueur,actifAdversaire){
 
 
     if(actifAdversaire[i] === undefined){
-      src_adv = "img/CARD_DEFAULT_VERSO.png";
+      src_adv = "web/img/CARDS/CARD_DEFAULT_VERSO.png";
       id_adv = -1;
       duree_adv = 0;
     }
 
     else{
-      src_adv = "img/"+actifAdversaire[i].imageCarte;
+      src_adv = "web/img/CARDS/"+actifAdversaire[i].imageCarte;
       id_adv = actifAdversaire[i].id_carte;
       duree_adv = actifAdversaire[i].duree;
       if(actifAdversaire[i].typeCarte == 'batiment') {
@@ -562,12 +562,12 @@ function dessineCartesActives(etatJoueur,actifAdversaire){
 
 
     if(etatJoueur.carteActiveNonRetourne[i] === undefined){
-      src = "img/CARD_DEFAULT_VERSO.png";
+      src = "web/img/CARDS/CARD_DEFAULT_VERSO.png";
       id = -1;
       duree = 0;
     }
     else{
-      src = "img/"+etatJoueur.carteActiveNonRetourne[i].imageCarte;
+      src = "web/img/CARDS/"+etatJoueur.carteActiveNonRetourne[i].imageCarte;
       id = etatJoueur.carteActiveNonRetourne[i].id_carte;
       duree = etatJoueur.carteActiveNonRetourne[i].duree;
       if(etatJoueur.carteActiveNonRetourne[i].typeCarte == 'batiment') {

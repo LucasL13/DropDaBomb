@@ -12,7 +12,7 @@ body{
     margin: auto;
     display: flex;
     flex-direction: column;
-    background: url(../img/text.png);
+    background: url(../web/img/text.png);
 }
 
 #zone_disable{

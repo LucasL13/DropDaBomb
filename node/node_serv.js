@@ -225,9 +225,9 @@ app.get('/clear', function(req, res){
 
 
 function authentification(pseudo, password,req,res){
+  bdd_connect();
   var query = "SELECT Pseudo FROM CompteJoueur WHERE (Pseudo LIKE "+connection.escape(pseudo)+" AND mdpCompte LIKE "+connection.escape(password)+");";
 
-  bdd_connect();
   connection.query(query, function(err, rows, fields){
     if (err) throw err;
     if(rows.length != 0){

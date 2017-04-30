@@ -13,7 +13,7 @@ En effet, les *Sprints* permettent d'avancer en fonction des priorités et des d
 ### Sprint 1
 Nom | Description | Membre | Temps (en h)
 --- | ------------| ------ | ------------
-**BDD** | Création de la base de donnée | Tous | 20
+**BDD** | Création de la base de données | Tous | 20
 
 
 ### Sprint 2

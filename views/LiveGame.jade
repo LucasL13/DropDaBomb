@@ -7,9 +7,8 @@ html
     // Import jQuery before materialize.js
     script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js')
-    script(type='text/javascript', src='js/script.js')
+    script(type='text/javascript', src='js/script_matchmaking.js')
     script(type='text/javascript', src='js/const.js')
-    script(type='text/javascript', src='js/init.js')
     // Import Google Icon Font
     link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
     // Import materialize.css
@@ -51,13 +50,13 @@ html
         a#connexion_btn.waves-effect.waves-green.btn-flat.green.darken-4.white-text Se connecter et chercher un match
     #zone
       #zone_select_card_effect_direct.center-align.valign-wrapper.grey
-        img#-1.zone_select_card_effect_direct_img.responsive-img(onclick='handleSelectCardEffectBatiment(-1)', src='img/CARD_TROPHY_VERSO.png')
+        img#-1.zone_select_card_effect_direct_img.responsive-img(onclick='handleSelectCardEffectBatiment(-1)', src='web/img/CARDS/CARD_TROPHY_VERSO.png')
       #zone_select_card_effect.center-align.valign-wrapper.grey
         #zone_select_card_effect_container.valign
-          img#zone_select_card_effect_card1.zone_select_card_img.card_clickable(src='img/BOUCLIER_RENVOI.png')
-          img#zone_select_card_effect_card2.zone_select_card_img.card_clickable(src='img/BOUCLIER_RENVOI.png')
-          img#zone_select_card_effect_card3.zone_select_card_img.card_clickable(src='img/BOUCLIER_RENVOI.png')
-          img#zone_select_card_effect_card4.zone_select_card_img.card_clickable(src='img/BOUCLIER_RENVOI.png')
+          img#zone_select_card_effect_card1.zone_select_card_img.card_clickable(src='web/img/CARDS/BOUCLIER_RENVOI.png')
+          img#zone_select_card_effect_card2.zone_select_card_img.card_clickable(src='web/img/CARDS/BOUCLIER_RENVOI.png')
+          img#zone_select_card_effect_card3.zone_select_card_img.card_clickable(src='web/img/CARDS/BOUCLIER_RENVOI.png')
+          img#zone_select_card_effect_card4.zone_select_card_img.card_clickable(src='web/img/CARDS/BOUCLIER_RENVOI.png')
       #zone_barre.transparent
         #zone_barre_container.white-text
           #zone_barre_vie_left
@@ -72,72 +71,72 @@ html
           .zone_barre_timer_separator
           #zone_barre_timer_idjoueur Vinspi
           #zone_barre_timer_chrono
-            img(src='img/timer_white.png')
+            img(src='web/img/timer_white.png')
           #zone_barre_timer_time 00:15
           .zone_barre_timer_separator
       #zone_jeu.transparent
         #zone_jeu_cards_adversaire
           .zone_jeu_separator
           #zone_jeu_cards_adversaire_card1.zone_jeu_card
-            img.grey.zone_jeu_card_img(src='img/BOUCLIER_RENVOI.png')
+            img.grey.zone_jeu_card_img(src='web/img/CARDS/BOUCLIER_RENVOI.png')
             #jeu_cards_overlay_pdvadv_carte1
             #jeu_cards_overlay_pdvadv_contour_carte1
             .jeu_cards_overlay.red-text  2
           .zone_jeu_cards_separator
           #zone_jeu_cards_adversaire_card2.zone_jeu_card
-            img.grey.zone_jeu_card_img(src='img/BOUCLIER_45.png')
+            img.grey.zone_jeu_card_img(src='web/img/CARDS/BOUCLIER_45.png')
             #jeu_cards_overlay_pdvadv_carte2
             #jeu_cards_overlay_pdvadv_contour_carte2
             .jeu_cards_overlay.red-text  2
           .zone_jeu_cards_separator.blue-text
           #zone_jeu_cards_adversaire_card3.zone_jeu_card
-            img.grey.zone_jeu_card_img(src='img/CARD_BOMB_VERSO.png')
+            img.grey.zone_jeu_card_img(src='web/img/CARDS/CARD_BOMB_VERSO.png')
             #jeu_cards_overlay_pdvadv_carte3
             #jeu_cards_overlay_pdvadv_contour_carte3
             .jeu_cards_overlay.red-text  2
           .zone_jeu_cards_separator.blue-text
           #zone_jeu_cards_adversaire_card4.zone_jeu_card
-            img.grey.zone_jeu_card_img(src='img/CARD_DEFAULT_VERSO.png')
+            img.grey.zone_jeu_card_img(src='web/img/CARDS/CARD_DEFAULT_VERSO.png')
             #jeu_cards_overlay_pdvadv_carte4
             #jeu_cards_overlay_pdvadv_contour_carte4
             .jeu_cards_overlay.red-text  2
           .zone_jeu_cards_separator.blue-text
           #zone_jeu_cards_adversaire_card5.zone_jeu_card
-            img.grey.zone_jeu_card_img(src='img/CARD_DEFAULT_VERSO.png')
+            img.grey.zone_jeu_card_img(src='web/img/CARDS/CARD_DEFAULT_VERSO.png')
             #jeu_cards_overlay_pdvadv_carte5
             #jeu_cards_overlay_pdvadv_contour_carte5
             .jeu_cards_overlay.red-text  2
           .zone_jeu_separator
         #zone_jeu_cards_middle
-          img#zone_jeu_card_middle_card.grey(src='img/BOMB_50_2TOURS.png')
+          img#zone_jeu_card_middle_card.grey(src='web/img/CARDS/BOMB_50_2TOURS.png')
         #zone_jeu_cards_player
           .zone_jeu_separator
           #zone_jeu_cards_player_card1.zone_jeu_card
-            img.grey.zone_jeu_card_img(src='img/BOUCLIER_RENVOI.png')
+            img.grey.zone_jeu_card_img(src='web/img/CARDS/BOUCLIER_RENVOI.png')
             #jeu_cards_overlay_pdv_carte1
             #jeu_cards_overlay_pdv_contour_carte1
             .jeu_cards_overlay.blue-text  2
           .zone_jeu_cards_separator
           #zone_jeu_cards_player_card2.zone_jeu_card
-            img.grey.zone_jeu_card_img(src='img/BOUCLIER_45.png')
+            img.grey.zone_jeu_card_img(src='web/img/CARDS/BOUCLIER_45.png')
             #jeu_cards_overlay_pdv_carte2
             #jeu_cards_overlay_pdv_contour_carte2
             .jeu_cards_overlay.blue-text  2
           .zone_jeu_cards_separator.blue-text
           #zone_jeu_cards_player_card3.zone_jeu_card
-            img.grey.zone_jeu_card_img(src='img/CARD_BOMB_VERSO.png')
+            img.grey.zone_jeu_card_img(src='web/img/CARDS/CARD_BOMB_VERSO.png')
             #jeu_cards_overlay_pdv_carte3
             #jeu_cards_overlay_pdv_contour_carte3
             .jeu_cards_overlay.blue-text  2
           .zone_jeu_cards_separator.blue-text
           #zone_jeu_cards_player_card4.zone_jeu_card
-            img.grey.zone_jeu_card_img(src='img/CARD_DEFAULT_VERSO.png')
+            img.grey.zone_jeu_card_img(src='web/img/CARDS/CARD_DEFAULT_VERSO.png')
             #jeu_cards_overlay_pdv_carte4
             #jeu_cards_overlay_pdv_contour_carte4
             .jeu_cards_overlay.blue-text  2
           .zone_jeu_cards_separator.blue-text
           #zone_jeu_cards_player_card5.zone_jeu_card
-            img.grey.zone_jeu_card_img(src='img/CARD_DEFAULT_VERSO.png')
+            img.grey.zone_jeu_card_img(src='web/img/CARDS/CARD_DEFAULT_VERSO.png')
             #jeu_cards_overlay_pdv_carte5
             #jeu_cards_overlay_pdv_contour_carte5
             .jeu_cards_overlay.blue-text  2
@@ -148,31 +147,31 @@ html
             #zone_deck_infos_container
               #zone_deck_infos_container_top
                 #zone_deck_infos_chat.center
-                  img(src='img/logo_chat_black.png')
+                  img(src='web/img/logo_chat_black.png')
                 #zone_deck_infos_settings.center
-                  img(src='img/button_passer_tour.png' onclick='passe_tour()')
+                  img(src='web/img/button_passer_tour.png' onclick='passe_tour()')
               #zone_deck_infos_container_bottom
                 #zone_deck_infos_powder.center
-                  img(src='img/powder.png')
+                  img(src='web/img/powder.png')
                   #zone_deck_infos_bottom_overlay.white-text 25
           .zone_deck_separator.black
           #zone_deck_cards
             #zone_deck_cards_container
               #zone_deck_cards_card1
                 #zone_deck_cards_card1_container
-                  img.card_clickable(src='img/BOMB_25.png', onclick="utiliserCarte(0,$(this).attr('id'))")
+                  img.card_clickable(src='web/img/CARDS/BOMB_25.png', onclick="utiliserCarte(0,$(this).attr('id'))")
                   #zone_deck_cards_card1_powder.powder_card_overlay.red-text.center-align  10
               #zone_deck_cards_card2
                 #zone_deck_cards_card2_container
-                  img.card_clickable(src='img/BOUCLIER_15.png', onclick="utiliserCarte(1,$(this).attr('id'))")
+                  img.card_clickable(src='web/img/CARDS/BOUCLIER_15.png', onclick="utiliserCarte(1,$(this).attr('id'))")
                   #zone_deck_cards_card2_powder.powder_card_overlay.red-text.center-align  20
               #zone_deck_cards_card3
                 #zone_deck_cards_card3_container
-                  img.card_clickable(src='img/BOUCLIER_RENVOI.png', onclick="utiliserCarte(2,$(this).attr('id'))")
+                  img.card_clickable(src='web/img/CARDS/BOUCLIER_RENVOI.png', onclick="utiliserCarte(2,$(this).attr('id'))")
                   #zone_deck_cards_card3_powder.powder_card_overlay.red-text.center-align  10
               #zone_deck_cards_card4
                 #zone_deck_cards_card4_container
-                  img.card_clickable(src='img/SPELL_BRULURE_DE_POWDER.png', onclick="utiliserCarte(3,$(this).attr('id'))")
+                  img.card_clickable(src='web/img/CARDS/SPELL_BRULURE_DE_POWDER.png', onclick="utiliserCarte(3,$(this).attr('id'))")
                   #zone_deck_cards_card4_powder.powder_card_overlay.red-text.center-align  40
   script(src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js')
   script(src='js/cli.js')

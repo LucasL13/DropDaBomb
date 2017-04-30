@@ -11,7 +11,7 @@ var account;
 
 $(document).ready(function(){
 
-    socket = io.connect('http://localhost:3000');
+    socket = io.connect('http://217.182.69.175:3000');
 
     $("#btn-create").click(function(e){check_account();});
 

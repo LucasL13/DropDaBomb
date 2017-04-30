@@ -2,7 +2,7 @@
 var deck_actif = 1;
 var carte_deck = -1;
 var carte_inventaire = -1;
-var socket = io("http://localhost:3000");
+var socket = io("http://http://217.182.69.175:3000");
 
 //ajout css
 $(document).ready(function(){
