@@ -7,6 +7,67 @@
 3. [Jade](#jade)
 4. [Socket.io](#socketio)
 
+## Socket.io 
+
+Le module [**Socket.io**](https://socket.io/) est surement la raison principale dans le choix de la technologie (Node.js) de notre projet. S'il existais de nombreuses solutions pour atteindre notre objectif (PHP, JAVAEE, etc..), aucune ne présentait les avantages non-négligeables de Node. 
+
+Le premier concerne les performances ; les échanges **asynchrones** client/serveur avec node+socket.io sont des plus rapides. 
+
+Le second concerne le langage lui-même ; le javascript est un langage que nous apprécions, et nous avions vraiment envie de tenter un developpement "full-JS" (client et serveur). 
+
+Le troisième concerne l'environnement lui-même ; Node, et ses modules, permettent de créer une architecture complète de serveur, sur lequel le developpeur à un contrôle total. De la gestion des routes, à la communication via socket, en passant par le moteur de templating, cet environnement permet de developper sur-mesure et c'est exactement ce dont nous avions besoin pour notre projet. 
+
+Et tout cela sans compter la legereté du developpement lui-même ; un editeur de texte, une console node et en quelques secondes on peut lancer, couper, relancer le serveur. C'est un advantage considérable quand on sait qu'avec JAVA EE par exemple, le simple "test" de notre programme prends plusieurs secondes et de nombreux fichiers générés, à chaque fois...
+
+
+Socket.io est un outil fantastique pour qui developper des applications web "temps-réel" et des communications connectées multi-utilisateur ; et c'est exactement notre cas.
+Nous souhaitons faire un jeu en ligne, performmant, qui permet à deux joueurs de se connecter pour s'affronter et Socket.io nous permet de :
+- Envoyer facilement des messages à un client depuis le serveur, ou inversement
+- Traiter facilement un message reçu
+- Gérer la connexion/deconnexion d'un client
+- Créer des salons d'utilisateurs (deux dans notre cas)
+
+L'envoi des "messages" étant au format JSON il est posible d'y stocker des informations sans limite et en utilisant une structure aussi complexe que nécéssaire. 
+Présentons rapidement le fonctionnement de notre serveur de jeu : Depuis le site (serveur web), lorsque le client appuie sur "Jouer", on lui renvoi la page à charger (l'interface du jeu) qui contient la ligne suivante : 
+``` javascript
+    var socket = io.connect('http://217.182.69.175:3001');
+``` 
+Il se connecte donc à notre serveur de jeu. Ce dernier mémorise sa socket, la relation qui lie le client et le serveur donc, et le place dans une *room* (un salon) non-complète.
+Lorsqu'un second joueur se connecte, la *room* est complète et le jeu se lance pour les deux utilisateurs. 
+
+Du coté du serveur on va utiliser les structure suivantes : 
+
+``` javascript
+function etatJoueur(pseudo,deck){
+  this.pseudo = pseudo;
+  this.bouclier = 0;
+  this.poudre = 25;
+  this.main = [];
+  this.deck = deck;
+  this.effetsRetardement = [];
+  this.cActives = [];
+  this.carteActiveNonRetourne = [];
+  /* les point du j1 sont MAX_PDV - j2.pdv */
+  this.pdv = NB_MAX_PDV;
+}
+
+function etatMatch(pseudo1,pseudo2,deck1,deck2) {
+  this.tour = 1;
+  this.joueur1 = new etatJoueur(pseudo1,deck1);
+  this.joueur2 = new etatJoueur(pseudo2,deck2);
+  this.nameRoom = "";
+  this.timer = NB_MAX_TIMER;
+}
+```
+
+La structure etatMatch comme son nom l'indique represente l'etat d'un match, et la structure etatJoueur l'etat d'un joueur. Le serveur règule donc la partie en fonction des mécaniques de jeu fixée, et adopte différents comportements selon la situation : 
+- Envoi un message à tous les salons (fin de tour par exemple, le serveur possède une horloge générale et commune à toutes les parties) 
+- Envoi un message au salon spéficique (fin de partie par exemple, pour annoncer aux deux joueurs le gagnant)
+- Envoi un message à chaque utilisateurs d'un salon (carte jouée par exemple, on renvoi alors à chaque joueur son etatJoueur)
+
+Dans le dernier cas, afin de prévenir certains "hacks", on ne renvoie pas entièrement l'etatMatch aux deux joueurs, mais seulement leurs etatJoueur respectifs afin que le javascript coté client se charge de mettre à jour l'interface du jeu en conséquence.
+
+
 ## Express 
 
 Le module [**Express**](http://expressjs.com/fr/) est probablement le module le plus populaire et le plus utilisé pour Node. 
@@ -164,7 +225,5 @@ En résumé, les principales caractéristiques de Jade sont :
 -	Passage d’informations utilisables dans le code Jade au format JSON lors du rendering
 -	Possibilité de découper le code et de créer des portions réutilisables via les « include »
 
-
-## Socket.io 
 
 ### More incoming.
