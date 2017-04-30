@@ -20,6 +20,13 @@ Le bandeau supérieur contient les visuels de cartes "verso", c'est à dire les 
 
 Les cartes de jeu sont toutes represéntées en base de données et possèdent, notamment : un nom, un coût en poudre, une description, une rareté, etc..  
 
+Les cartes sont representées de la manière suivante en Base de données. Nous avons fait le choix de gérer les chemins des images du coté du serveur, afin de n'avoir aucune repercution sur le code en cas de changement de nom ou chemin. 
+
+<p align="center">
+    <img src="Images/CARDS_BDD.png" width="600px"/>
+</p>
+
+
 *Une description détaillée de chaque carte est en cours d'élaboration et sera fournie dans les semaines à venir.*
 
 ---
