@@ -23,7 +23,7 @@ Les cartes de jeu sont toutes represéntées en base de données et possèdent, 
 Les cartes sont representées de la manière suivante en Base de données. Nous avons fait le choix de gérer les chemins des images du coté du serveur, afin de n'avoir aucune repercution sur le code en cas de changement de nom ou chemin. 
 
 <p align="center">
-    <img src="Images/CARDS_BDD.png" width="600px"/>
+    <img src="Images/CARDS_BDD.PNG" width="600px"/>
 </p>
 
 
