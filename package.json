@@ -1,0 +1,36 @@
+{
+
+  "name": "dropdabomb",
+  "version":  "0.1.0",
+  "description": "DropDaBomb is a fresh multiplayer TBS game. Want something explosive ? Don't hesitate any longer !",
+  "keywords": [
+    "bomb game",
+    "ddb",
+  ],
+  "dependencies": {
+    "express": "4.15.2",
+    "body-parser": "1.17.1",
+    "express-session": "1.15.2",
+    "cookie-parser": "1.4.3",
+    "socket.io": "1.7.3"
+  },
+  "repository" :{ 
+    	"type" : "git", 
+    	"url" : "https://github.com/LucasL13/DropDaBomb"
+  },
+  "contributors": [
+    {
+      "name": "Pierre Vincent",
+      "email": "vinspi13@gmail.com"
+    },
+    {
+      "name": "Lucas Loignon",
+      "email": "lucasl.pro13@gmail.com"
+    },
+    {
+      "name": "Rémi Deutsch",
+      "email": "deutsch.remi@gmail.com"
+    }
+  ]
+
+}

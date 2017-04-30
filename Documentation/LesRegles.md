@@ -13,13 +13,13 @@
 
 
 ### Principe général
-DropDaBomb est un TBS (jeu de stratégie au tour par tour) de cartes en ligne. Les affrontements se font en un contre un, les joueurs pouvant utiliser des cartes en échange de ressources, de la poudre principalement, pour essayer de prendre le dessus sur leurs adversaires, jusqu'à qu'un joueur amène la barre de vie à 150 et fasse ainsi exploser la bombe principale dans le camp de son opposant.
+DropDaBomb est un TBS (jeu de stratégie au tour par tour) de cartes en ligne. Les affrontements se font en un contre un, les joueurs pouvant utiliser des cartes en échange de ressources, de la poudre principalement, pour essayer de prendre le dessus sur leurs adversaires, jusqu'à qu'un joueur amène la barre de vie à 300 et fasse ainsi exploser la bombe principale dans le camp de son opposant.
 
 
 
 ### Barre de vie
 Dans DropDaBomb, les joueurs se partagent une unique barre de vie. Quand un joueur inflige des dégâts, on dira qu'il pousse la barre de vie vers l'adversaire : ses points de vie augmente, et ceux de l'adversaire diminue.
-Dès qu'un joueur atteint 150 points de vie, ce qui équivaut à faire attendre -150 points de vie à l'adversaire, alors il gagne la partie.
+Dès qu'un joueur atteint 300 points de vie, ce qui équivaut à faire attendre 0 points de vie à l'adversaire, alors il gagne la partie.
 
 ### Les mains et decks
 Avant de rechercher un adversaire, chaque joueur constitue un Deck de 8 cartes qu'il utilisera lors de ses combats. Le joueur peut changer la composition de son Deck entre chaque match comme bon lui semble, en respectant les règles suivantes :
