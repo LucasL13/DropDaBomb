@@ -203,6 +203,14 @@ app.get('/Game', function(req, res){
   }
 });
 
+app.get('/Shop', function(req,res){
+  res.render('Shop');
+});
+
+app.get('/Social', function(req,res){
+  res.render('Social');
+});
+
 app.post('/Account', function (req, res) {
 
  authentification(req.param("signin_pseudo"), req.param("signin_password"),req,res);
@@ -226,12 +234,12 @@ app.get('/clear', function(req, res){
 
 function authentification(pseudo, password,req,res){
   bdd_connect();
-  var query = "SELECT Pseudo FROM CompteJoueur WHERE (Pseudo LIKE "+connection.escape(pseudo)+" AND mdpCompte LIKE "+connection.escape(password)+");";
-
+  var query = "SELECT Pseudo, mailCompte, niveauJoueur, monnaieIG, estAdmin FROM CompteJoueur WHERE (Pseudo LIKE "+connection.escape(pseudo)+" AND mdpCompte LIKE "+connection.escape(password)+");";
   connection.query(query, function(err, rows, fields){
     if (err) throw err;
     if(rows.length != 0){
-        req.session.account = {'pseudo' : req.param("signin_pseudo"), 'password' : req.param("signin_password")};
+        console.log(" : " + rows[0].Pseudo + rows[0].mailCompte);
+        req.session.account = {'pseudo' : req.param("signin_pseudo"), 'password' : req.param("signin_password"), 'mailCompte' : rows[0].mailCompte, 'niveauJoueur' : rows[0].niveauJoueur, 'monnaieIG' : rows[0].monnaieIG, 'estAdmin' : rows[0].estAdmin};
         req.session.save( (err) => {} );
         res.render('Account', req.session.account);
     }

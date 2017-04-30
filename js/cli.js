@@ -109,7 +109,7 @@ function card_upgrade(){
     }
   }
   for(var i=etatJoueur.carteActiveNonRetourne.length;i<5;i++){
-    $('#zone_select_card_effect_card'+(i+1)).attr('src','web/img/CARD_DEFAULT_VERSO.png');
+    $('#zone_select_card_effect_card'+(i+1)).attr('src','web/img/CARDS/CARD_DEFAULT_VERSO.png');
     $('#zone_select_card_effect_card'+(i+1)).off('click',handleSelectCardEffectUpgrade);
     $('#zone_select_card_effect_card'+(i+1)).removeClass("card_clickable");
   }
@@ -341,7 +341,7 @@ function card_desenvoutement(){
   }
   for(var i=actifAdversaire.length;i<5;i++){
     console.log("i = "+i);
-    $('#zone_select_card_effect_card'+(i+1)).attr('src','web/img/CARD_DEFAULT_VERSO.png');
+    $('#zone_select_card_effect_card'+(i+1)).attr('src','web/img/CARDS/CARD_DEFAULT_VERSO.png');
     $('#zone_select_card_effect_card'+(i+1)).off('click',handleSelectCardEffectDesenvoutement);
     $('#zone_select_card_effect_card'+(i+1)).removeClass("card_clickable");
   }

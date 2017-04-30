@@ -1,2 +1,34 @@
 // Page d'accueil de la section "Compte" 
 // Portion -> "S'est connecté et affiche la gestion du compte (informations du compte)"
+
+.col.l2.m2.s12
+
+.col.l9.m9.s12
+    .row
+        .col.s12.m12.l12
+            .card.orange.darken-3
+                .card-content.white-text.center-align
+                    span.card-title Informations du compte
+                    br 
+                    p
+                        h6.black-text Pseudo du compte : 
+                        font.white-text #{pseudo}
+                        br
+                        br
+                        h6.black-text Email du compte :
+                        font.white-text #{mailCompte}
+                        br
+                        br
+                        h6.black-text Niveau du joueur :
+                        font.white-text #{niveauJoueur}
+                        br
+                        br
+                        h6.black-text Monnaie (IG)  :
+                        font.white-text #{monnaieIG} crédits
+                        br
+                        br
+                        h6.black-text Compte administrateur : 
+                        if estAdmin == 0 
+                            font.white-text Non
+                        else
+                            font.white-text Oui
