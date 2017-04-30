@@ -1,0 +1,17 @@
+// Route principale pour la section "Compte"
+// Si aucune connexion déja faite : renvoi vers AccountMenu
+// Sinon affiche "Bienvenue xxx" ( à remplacer par "include AccountHome" une fois AccountHome complété )
+
+html
+    head
+        include templates/template_head
+
+    body
+        include templates/template_nav
+
+        #GUI_CONTENT.row
+
+            if pseudo == undefined
+                include AccountMenu.jade
+            else
+                h1.center-align Bienvenue #{pseudo}

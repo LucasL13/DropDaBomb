@@ -1,0 +1,11 @@
+
+.deck-container{
+  background-image: url("../img/papier-froisse.jpg");
+  padding: 2em;
+}
+
+.deck-container img{
+  width: 100%;
+}
+
+

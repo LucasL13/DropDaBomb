@@ -1,0 +1,92 @@
+
+@font-face {
+    font-family: edo;
+    src: url("../fonts/edosz.ttf");
+}
+
+.edo{
+    font-family: edo;
+}
+
+
+.indicator{
+    background-color: rgba(0,0,0,0) !important;
+}
+
+.tabs{
+    background-color: rgba(0,0,0,0);
+}
+
+.tab-active{
+    background-color: #ffa000  !important;
+}
+
+.tab{
+    background-color: #655c5c;
+    position: relative;
+    /*border-radius: 15% 15% 0% 0%;*/
+}
+
+.container .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container {
+  padding-top: 5em;
+}
+
+#test-swipe-1, #test-swipe-2, #test-swipe-3, #test-swipe-4{
+    padding-top: 5vh;
+    /*border: 10px solid #4CAF50;*/
+    border-top: none;
+    border-radius: 0% 0% 5% 5%;
+    -moz-box-shadow: 5px 5px 20px #4a4949;
+    -webkit-box-shadow: 5px 5px 20px #4a4949;
+    -o-box-shadow: 5px 5px 20px #4a4949;
+    box-shadow: 5px 5px 20px #4a4949;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color='#6565', Direction=135, Strength=5);
+}
+
+
+.switch label .lever:after{
+    background-color: black;
+}
+
+.switch label .lever{
+    background-color: white;
+}
+.switch label input[type=checkbox]:checked+.lever:after{
+    background-color: #1976d2;
+}
+.switch label input[type=checkbox]:checked+.lever{
+    background-color: white;
+}
+
+.tab_arrow{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: solid transparent 10px;
+    border-left: solid white 10px;
+    top: 33%;
+    right: 5%;
+}
+
+.card{
+    padding: 0;
+}
+
+.card .card-content{
+    padding: 5px;
+}
+
+.card .card-title{
+    padding: 0;
+    font-size: 15px;
+    font-family: edo;
+}
+
+.card .card-content p{
+    padding: 10px;
+}

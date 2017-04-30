@@ -1,0 +1,50 @@
+// Page d'accueil de la section "Compte" 
+// Portion -> "Ne s'est pas encore connecté, peut choisir de se connecter ou de créer un compte"
+
+.col.l2.m2.s12
+|         
+.col.l9.m9.s12
+    .col.l12.m12.s12
+        .card.amber.darken-3.center-align
+            .card-action.container
+                .row
+                    .col.l6.m6.s6
+                        .card
+                            .card-image.waves-effect.waves-block.waves-light
+                                img.activator(src='web/img/SIGNIN_ICON.png')
+                                                               
+                            .card-content.edo.black-text Se connecter
+                                                     
+                            .card-reveal
+                                span.card-title.grey-text.text-darken-4
+                                    i.material-icons.right close
+                                                                    
+                                .row
+                                    form(action="Account" method="post")
+                                        .input-field.col.l12.m12.s12
+                                            i.material-icons.prefix account_circle
+                                                                                                 
+                                            input#signin_pseudo.validate(type='text' name="signin_pseudo")
+                                                                                                 
+                                            label(for='pseudo') Pseudo ou Email
+                                                                                        
+                                        .input-field.col.l12.m12.s12
+                                            i.material-icons.prefix offline_pin
+                                                                                                 
+                                            input#signin_password.validate(type='password' name="signin_password")
+                                                                                                 
+                                            label(for='password') Mot de passe
+                                                                                         
+                                            button#signin_submit.btn.waves-effect.waves-light.amber.darken-2.black-text Se connecter
+                                                i.material-icons.right send
+                        |                             
+                    .col.l6.m6.s6
+                        a(href='AccountCreate', style='margin-right: 0px')
+                            .card
+                                .card-image
+                                    img(src='web/img/SIGNUP_ICON.png')
+                                |                                         
+                                .card-content.edo.black-text
+                                    | Cr&eacute;er un compte
+|         
+.col.l1.m1.s12

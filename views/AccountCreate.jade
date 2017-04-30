@@ -1,0 +1,138 @@
+// Page d'accueil de la section "Compte" 
+// Portion -> "Formulaire de création de compte"
+// TODO : Le serveur (serv.js) est en cours de modif, le code traitant les "emit" est commenté et le formulaire ne marche pas pour l'instant
+
+
+html 
+    head
+        include templates/template_head.jade
+        link(rel='stylesheet', href='web/css/account.css') 
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js")
+        script(rel="text/javascript", src='web/js/account.js')
+        // ajouter les scripts/css propres a cette Page
+    body
+        include templates/template_nav.jade
+    
+        .container
+            .col.l10.m12.s12.offset-l1
+                // Menu de navigations avec les onglets des etapes
+                ul#tabs-swipe-demo.tabs.row
+                    li#tab-step-1.tab.col.s3.m3.l3.tooltipped.tab-active(data-position='top', data-delay='0', data-tooltip='Créer mon compte')
+                        a#tab-step-1-click.active(href='#test-swipe-1')
+                            img(src='web/img/utils/btn_one_step.png')
+                            .tab_arrow
+                    li#tab-step-2.tab.col.s3.m3.l3.tooltipped.disabled(data-position='top', data-delay='0', data-tooltip='Configurer mes options')
+                        a#tab-step-2-click(href='#test-swipe-2')
+                            img(src='web/img/utils/btn_two_step.png')
+                            .tab_arrow
+                    li#tab-step-3.tab.col.s3.m3.l3.tooltipped.disabled(data-position='top', data-delay='0', data-tooltip='Choisir mon starter')
+                        a#tab-step-3-click(href='#test-swipe-3')
+                            img(src='web/img/utils/btn_three_step.png')
+                            .tab_arrow
+                    li#tab-step-4.tab.col.s3.m3.l3.tooltipped.disabled(data-position='top', data-delay='0', data-tooltip='Combattre !')
+                        a#tab-step-4-click(href='#test-swipe-4')
+                            img(src='web/img/utils/btn_four_step.png')
+
+                
+                // 1ere Etape : Remplir le formulaire d'inscription
+                #test-swipe-1.col.s12.white
+                    #zone_content_form.row
+                        .row
+                            .input-field.col.s8.offset-s2
+                                input#pseudo.validate(placeholder='', name='pseudo', type='text')
+                                label(for='pseudo') Pseudo
+                        .row
+                            .input-field.col.s8.offset-s2
+                                input#password.validate(placeholder='', name='password', type='password')
+                                label(for='password') Mot de passe
+                        .row
+                            .input-field.col.s8.offset-s2
+                                input#password_confirm.validate(placeholder='', name='password_confirm', type='password')
+                                label(for='password_confirm') Confirmez le mot de passe
+                        .row
+                            .input-field.col.s8.offset-s2
+                                input#email.validate(placeholder='', name='email', type='email')
+                                label(for='email') Email
+                        .row
+                            .col.s4.offset-s4.center-align
+                                button#btn-create.btn-large.waves-effect.waves-light.amber(type='submit')
+                                  div Créer mon compte
+                                
+               
+               
+                // 2eme Etape : Choisir les options du compte
+                #test-swipe-2.col.s12.amber.darken-2.white-text.center-align
+                    #zone_content_configure_account.row
+                        .row
+                            .switch.col.s8.offset-s2.center-align
+                                h5  Recevoir des newsletter de nos partenaires 
+                                label.white-text
+                                | Off
+                                input(type='checkbox')
+                                span.lever
+                                |                                             On
+                        .row
+                            .switch.col.s8.offset-s2.center-align
+                                h5  Recevoir des offres gratuites par e-mail 
+                                label.white-text
+                                | Off
+                                input.blue(type='checkbox')
+                                span.lever
+                                |                                             On
+                        a#step2-nextbtn.btn-large.waves-effect.grey.white-text  Etape suivante 
+               
+               
+                // 3eme Etape : Choix du deck STARTER
+                #test-swipe-3.col.s12.amber.darken-2(style='padding: 4em')
+                    #zone_content_starter.row
+                        .row.center-align
+                            .col.l4.m4.s12
+                                .row
+                                    .col.s12.m12.l12.transparent
+                                        #card_starter_YSNP.card.transparent(style='box-shadow:none')
+                                        .card-image
+                                            img(src='web/img/utils/BOX_STARTER_YOUSHALLNOTPASS.png')
+                                        .card-content.transparent.white-text
+                                            .card.black.darken-1
+                                            .card-content.white-text
+                                                span.card-title.blue-text You shall not pass
+                                                p Un deck défensif pour ceux qui n'aiment pas recevoir de dégats
+                        .col.l4.m4.s12
+                            .row
+                                .col.s12.m12.l12.transparent
+                                    #card_starter_HP.card.transparent(style='box-shadow:none')
+                                        .card-image
+                                            img(src='web/img/utils/BOX_STARTER_HARRYPOWDER.png')
+                                        .card-content.transparent.white-text
+                                            .card.black.darken-1
+                                            .card-content.white-text
+                                                span.card-title.green-text Harry Powder
+                                                p Un deck pour les magiciens, rempli de sorts puissants
+                        .col.l4.m4.s12
+                            .row
+                                .col.s12.m12.l12.transparent
+                                    #card_starter_MTBBWY.card.transparent(style='box-shadow:none')
+                                        .card-image
+                                            img(src='web/img/utils/BOX_STARTER_MAYTHEBOMB.png')
+                                        .card-content.transparent.white-text
+                                            .card.black.darken-1
+                                            .card-content.white-text
+                                                span.card-title.red-text May the bomb be with you
+                                                p Un deck tres offensif, pour frapper fort et ... frapper fort !
+                            a#btn-valider-starter.btn-large.waves-effect.black.orange-text  Choisir ce deck 
+              
+              
+                // 4eme Etape : Lire les regles / Faire le tutorial / Commencer à combattre
+                #test-swipe-4.col.s12.amber.darken-2
+                    .container
+                        #zone_content_starter.row
+                        .row.center-align
+                            i.material-icons.large.white-text done
+                            h4.white-text  Félicitations, votre compte à été crée 
+                            ul(style='margin-top: 5vh')
+                            li
+                                .collapsible-header.blue.white-text Lire les règles du jeu
+                            li
+                                .collapsible-header.green.white-text Faire le tutoriel
+                            li
+                                .collapsible-header.red.white-text Commencer a combattre

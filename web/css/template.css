@@ -1,0 +1,108 @@
+
+@font-face {
+  font-family: Luna;
+  src: url("../fonts/Luna.ttf");
+}
+
+@font-face {
+  font-family: Edo;
+  src: url("../fonts/edosz.ttf");
+}
+
+@keyframes selection {
+  0% {
+    border-style: none;
+    border-width: 0px;
+    border-color: orange;
+  }
+  100% {
+    border-width: 0px;
+    border-left-width: 5px;
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-color: orange;
+  }
+}
+
+.line{
+  margin-top: 2em;
+  border: solid 2px;
+  height: 0;
+  width: 100%;
+}
+
+body {
+  background-image: url("../img/background_create_account.png");
+}
+
+nav {
+  background-color: transparent;
+  z-index: 1;
+}
+
+nav .nav-container{
+  margin-top: 2vh;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  right: 0;
+  margin-right: 0;
+  display: flex;
+}
+
+.selected-link{
+  color: white;
+}
+
+.selected{
+  border-width: 0px;
+  border-left-width: 5px;
+  border-top-width: 5px;
+  border-right-width: 5px;
+  border-color: orange;
+  border-bottom: #ff8f00 8px solid;
+}
+
+nav ul li{
+  display: block;
+  width: 300px;
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 1.5em;
+
+  border-bottom: 5px solid white;
+}
+
+nav ul li a {
+  font-family: Edo;
+  font-size: 2em;
+  text-decoration: none;
+  color: orange;
+}
+
+#logo {
+  margin-left: 1em;
+  margin-top: 1em;
+  width: 15vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+
+nav{
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+
+
+#GUI_CONTENT{
+  margin-top: 2vh;
+}

@@ -1,0 +1,80 @@
+html
+    head
+        include templates/template_head
+        link(rel='stylesheet', href='../web/css/deckManager.css')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js")
+        script(src="../web/js/deckManager.js")
+    body
+        include templates/template_nav
+        div(id="pseudo" class=""+session.account.pseudo)
+        section#decks
+            .row#deck1
+                .col.s4.m4.l4.center-align
+                    button(onclick="switcher(1)").bouton-switch1 deck1
+                .col.s7.m7.l7
+                    .title-deck.orange-text.center-align Deck 1
+                    .row  
+                        .col.s3.m3.l3
+                            img(src='../web/img/CARDS/'+deck1[0].imageCarte id="a"+deck1[0].id_Carte).responsive-img.carte-deck
+                        .col.s3.m3.l3
+                            img(src='../web/img/CARDS/'+deck1[1].imageCarte id="a"+deck1[1].id_Carte).responsive-img.carte-deck
+                        .col.s3.m3.l3
+                            img(src='../web/img/CARDS/'+deck1[2].imageCarte id="a"+deck1[2].id_Carte).responsive-img.carte-deck
+                        .col.s3.m3.l3
+                            img(src='../web/img/CARDS/'+deck1[3].imageCarte id="a"+deck1[3].id_Carte).responsive-img.carte-deck
+                            
+                .col.s4.m4.l4.center-align
+                    button(onclick="switcher(2)").bouton-switch2 deck2
+                .col.s7.m7.l7
+                    .row  
+                        .col.s3.m3.l3
+                            img(src='../web/img/CARDS/'+deck1[4].imageCarte id="a"+deck1[4].id_Carte).responsive-img.carte-deck
+                        .col.s3.m3.l3
+                            img(src='../web/img/CARDS/'+deck1[5].imageCarte id="a"+deck1[5].id_Carte).responsive-img.carte-deck
+                        .col.s3.m3.l3
+                            img(src='../web/img/CARDS/'+deck1[6].imageCarte id="a"+deck1[6].id_Carte).responsive-img.carte-deck
+                        .col.s3.m3.l3
+                            img(src='../web/img/CARDS/'+deck1[7].imageCarte id="a"+deck1[7].id_Carte).responsive-img.carte-deck
+                      
+            .row#deck2.deck2-out
+                .col.s4.m4.l4.center-align
+                    button(onclick="switcher(1)").bouton-switch1 deck1
+                .col.s7.m7.l7
+                    .title-deck.orange-text.center-align Deck 2
+                    .row  
+                        .col.s3.m3.l3
+                            img(src='../web/img/CARDS/'+deck2[0].imageCarte id="b"+deck2[0].id_Carte).responsive-img.carte-deck
+                        .col.s3.m3.l3
+                            img(src='../web/img/CARDS/'+deck2[1].imageCarte id="b"+deck2[1].id_Carte).responsive-img.carte-deck
+                        .col.s3.m3.l3
+                            img(src='../web/img/CARDS/'+deck2[2].imageCarte id="b"+deck2[2].id_Carte).responsive-img.carte-deck
+                        .col.s3.m3.l3
+                            img(src='../web/img/CARDS/'+deck2[3].imageCarte id="b"+deck2[3].id_Carte).responsive-img.carte-deck
+                .col.s4.m4.l4.center-align
+                    button(onclick="switcher(2)").bouton-switch2 deck2            
+                .col.s7.m7.l7
+                    .row  
+                        .col.s3.m3.l3
+                            img(src='../web/img/CARDS/'+deck2[4].imageCarte id="b"+deck2[4].id_Carte).responsive-img.carte-deck
+                        .col.s3.m3.l3
+                            img(src='../web/img/CARDS/'+deck2[5].imageCarte id="b"+deck2[5].id_Carte).responsive-img.carte-deck
+                        .col.s3.m3.l3
+                            img(src='../web/img/CARDS/'+deck2[6].imageCarte id="b"+deck2[6].id_Carte).responsive-img.carte-deck
+                        .col.s3.m3.l3
+                            img(src='../web/img/CARDS/'+deck2[7].imageCarte id="b"+deck2[7].id_Carte).responsive-img.carte-deck
+                                
+        
+        #separator.orange-text.center-align Mon inventaire
+
+        #sectionInventaire
+            .row#inventaire1
+                .col.s12.m12.l12
+                    for carte in inventaire1
+                        .col.s2.m2.l2
+                            img(src='../web/img/CARDS/'+carte.imageCarte id="a"+carte.id_Carte).responsive-img.carte-inventaire
+
+            .row#inventaire2
+                .col.s12.m12.l12
+                    for carte in inventaire2
+                        .col.s2.m2.l2
+                            img(src='../web/img/CARDS/'+carte.imageCarte id="b"+carte.id_Carte).responsive-img.carte-inventaire
