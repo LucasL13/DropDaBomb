@@ -2,10 +2,11 @@
 
 # Les packages et technologies utilisés
 
-1. [Express](#express)
-2. [MySQL](#mysql)
-3. [Jade](#jade)
-4. [Socket.io](#socketio)
+1. [Socket.io](#socketio)
+2. [Express](#express)
+3. [MySQL](#mysql)
+4. [Jade](#jade)
+
 
 ## Socket.io 
 
@@ -20,8 +21,8 @@ Le troisième concerne l'environnement lui-même ; Node, et ses modules, permett
 Et tout cela sans compter la legereté du developpement lui-même ; un editeur de texte, une console node et en quelques secondes on peut lancer, couper, relancer le serveur. C'est un advantage considérable quand on sait qu'avec JAVA EE par exemple, le simple "test" de notre programme prends plusieurs secondes et de nombreux fichiers générés, à chaque fois...
 
 
-Socket.io est un outil fantastique pour qui developper des applications web "temps-réel" et des communications connectées multi-utilisateur ; et c'est exactement notre cas.
-Nous souhaitons faire un jeu en ligne, performmant, qui permet à deux joueurs de se connecter pour s'affronter et Socket.io nous permet de :
+Socket.io est un outil fantastique pour qui veut developper des applications web "temps-réel" et des communications connectées multi-utilisateur ; et c'est exactement notre cas.
+Nous souhaitons faire un jeu en ligne, performant, qui permet à deux joueurs de se connecter pour s'affronter et Socket.io nous permet de :
 - Envoyer facilement des messages à un client depuis le serveur, ou inversement
 - Traiter facilement un message reçu
 - Gérer la connexion/deconnexion d'un client
@@ -65,9 +66,30 @@ La structure etatMatch comme son nom l'indique represente l'etat d'un match, et 
 - Envoi un message au salon spéficique (fin de partie par exemple, pour annoncer aux deux joueurs le gagnant)
 - Envoi un message à chaque utilisateurs d'un salon (carte jouée par exemple, on renvoi alors à chaque joueur son etatJoueur)
 
-Dans le dernier cas, afin de prévenir certains "hacks", on ne renvoie pas entièrement l'etatMatch aux deux joueurs, mais seulement leurs etatJoueur respectifs afin que le javascript coté client se charge de mettre à jour l'interface du jeu en conséquence.
+Dans le dernier cas, afin de prévenir certains "hacks", on ne renvoie pas entièrement l'etatMatch aux deux joueurs, mais seulement leurs etatJoueur respectifs afin que le javascript coté client se charge de mettre à jour l'interface du jeu en conséquence. Encore une fois, il est très facile de transmettre des structures comme etatJoueur qui possedent plusieurs attributs et tableaux, puisque l'encodage se fait en JSON. Du coté du receveur il est également très facile de manipuler les données reçues. 
 
+Pour résumer, Socket.io nous permet d'avoir un jeu performant via une programmation aynschrone et non-bloquante ; ainsi pour le client tout est invisible, il voit juste un jeu qui réagit et évolue, alors qu'en réalité des milliers de messages sont transmis durant une partie. Chaque fois que le joueur fait une action, il envoi un message au serveur pour décrire cette action, le serveur vérifie si l'action était possible/légitime, si c'est le cas, il met à jour la configuration du match et prévient les deux joueurs de la nouvelle configuration et donc du contenu à afficher à l'écran. 
 
+Exemples : 
+
+Coté serveur : 
+``` javascript
+ socket.on('useCard', function(action){ 
+     ...
+ }
+ ``` 
+
+``` javascript
+ socket.on('chercherMatch',function(pseudo){
+     ...
+ }
+ ``` 
+
+Coté client : 
+``` javascript
+socket.emit('useCard',{'id_carte' : CARD_ECHANGE_FORCE, 'pseudo' : Joueur, 'carte_cible' : (value[value.length-1]-1), 'pos_carte' : pos_carte_selection});
+ }
+ ``` 
 ## Express 
 
 Le module [**Express**](http://expressjs.com/fr/) est probablement le module le plus populaire et le plus utilisé pour Node. 
