@@ -1,5 +1,14 @@
 <h1 align="center"> DROP DA BOMB </h1>
 
+> Note à l'attention de M.Timo Jolivet : 
+>> Le site est en ligne et le projet (site+jeu) directement testable à l'addresse suivante : [DDB](http://217.182.69.175:8080)
+>> Nous avons créé deux comptes utilisables à des fins de démo :
+>>> Pseudo : Test1 / Mot de passe : testtest (Possède toutes les cartes)
+>>> Pseudo : Test2 / Mot de passe : testtest (Possède les 8 cartes par défaut)
+>> Pour tester : ouvrir deux navigateurs, se connecter une fois avec le premier compte, une seconde fois avec le second compte.
+>> Consulter les informations du compte, voir / changer le deck et cliquer sur "Jouer" dans la barre de navigation.
+>> Une fois les deux comptes en recherche de match, une partie va se créer et il ne reste plus qu'à jouer. 
+ 
 1. [Le jeu](#le-jeu)
 2. [Utilisation du site](#utilisation-du-site)
 3. [Les Regles](Documentation/LesRegles.md)
@@ -36,7 +45,7 @@ A plus long terme, les objectifs sont de développer une version « application 
 
 Si vous êtes un nouvel utilisateur, voici comment jouer en quelques étapes seulement : 
 
-1. Se connecter au site : [DDB](http://217.182.69.175:8081/Account)
+1. Se connecter au site : [DDB](http://217.182.69.175:8080)
 2. Créer son compte 
 3. Jouer en cliquant sur le bouton "Jouer" de la barre de navigation
 
