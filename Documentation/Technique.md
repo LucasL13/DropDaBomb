@@ -16,7 +16,7 @@ Le serveur est un serveur distant, adressé par une IP publique, qui repose sur 
 ### La structure du projet 
  
 <p align="center">
-    <img src="Images/STRUCTURE_DDB.jpg" width="600px"/>
+    <img src="Images/StructureDDB.jpg" width="600px"/>
 </p>
 
 #### Dossier **node**
