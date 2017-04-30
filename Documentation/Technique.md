@@ -36,7 +36,7 @@ Voir la section [Les packages / Jade](Packages.md#jade) pour plus d'informations
 
 #### Dossier **web**
 
-Ce dossier contient le "contenu additionnel". Il s'agit des feuilles de styles, des scripts, des polices ou des images que les fichiers *.jade* utilisent. 
+Ce dossier contient les éléments *additionnels*. Il s'agit des feuilles de styles, des scripts, des polices ou des images que les fichiers *.jade* utilisent. 
 
 Il est possible de fusionner le dossier *views* et le dossier *web* mais nous avons fais le choix de différencier les portions purement techniques et le reste dans notre architecture.
 
@@ -47,8 +47,3 @@ Ce dossier contient les scripts importants de notre architecture ainsi que le fi
 #### Dossier **css**
 
 Ce dossier contient le fichier *style.css* qui recence les règles de style (CSS) principales.
-
-
-#### Dossier **img**
-
-Ce dossier contient un nombre importants d'images qui sont utilisées par le site et par le jeu (backgrounds, cartes de jeu, icônes, etc..).
